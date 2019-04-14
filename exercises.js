@@ -8,6 +8,11 @@ Write a for-loop that will iterate through 20 numbers (starting at 1 and ending 
 .
 "Now serving 20."
 */
+for (var i=1; i<=20; i++){
+   var serving = "Now serving " + i + "."
+   console.log(serving);
+}
+
 
 
 /* 2) Pop Charts
@@ -21,6 +26,10 @@ This week's chart buster is: '24K Magic.'
 
 var topFive = ["Closer", "Starboy", "I Feel It Coming", "Let Me Love You", "24K Magic"];
 
+for(var i=0; i<topFive.length; i++){
+   var message = "This week's chart buster is: " + topFive[i] + "."
+   console.log(message);
+}
 
 /* 3) Dead Presidents
 Declare a variable named `presidents` and assign it to an array containing the following Presidents: Washington, Adams, Jefferson, Madison and Monroe.
@@ -96,7 +105,18 @@ Next, write a function named `nap`. This function takes in a single parameter: `
 Inside of this function write a for-loop that will iterate through the `napSchedule` array and console.log the message: `ZzZzZzZz` if the schedule is `true`, otherwise the it will console.log the message: `Gotta get coding!` if the schedule is `false`.
 */
 
+var napSchedule = [false, false, true, false, true, true];
 
+function nap(schedule){
+ for (var i = 0; i<schedule.length; i++){
+    if(schedule[i] ===true){
+       console.log("ZzZzZzZz");
+    } else {
+       console.log ("Gotta get coding!");
+    }
+ }
+}
+nap(napSchedule);
 
 /* 10) Copy Pasta
 Declare a variable named `valuesArray` and assign its value to be an array: `[99, 66, 829, 1941, 8, 76]`. 
